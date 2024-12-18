@@ -29,6 +29,12 @@ const Navbar = () => {
               Home
             </Link>
             <Link
+              href="/admin/dashboard"
+              className="text-md font-semibold text-white hover:border-b-2  border-blue-400 "
+            >
+              Admin
+            </Link>
+            <Link
               href="/about"
               className="inline-flex items-center gap-1 text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >

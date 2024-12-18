@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./navbar";
 import { Toaster } from "react-hot-toast";
 // import { AppProvider } from "@/context/appContext";
 
@@ -29,7 +28,6 @@ export default function RootLayout({ children }) {
       >
         <Toaster position="bottom-left"></Toaster>
     
-        <Navbar />
         {children}
       </body>
     </html>
