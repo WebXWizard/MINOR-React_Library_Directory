@@ -20,7 +20,7 @@ const Home = () => {
           </a>
           {/* logo - end */}
           {/* nav - start */}
-          <nav className="hidden gap-12 lg:flex ">
+          <nav className="hidden gap-16 lg:flex ">
             <a
               href="/"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400 "
@@ -34,41 +34,41 @@ const Home = () => {
               Admin
             </a>
             <a
-              href="/about"
+              href="/user/about"
               className="inline-flex items-center gap-1 text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               About
             </a>
             <a
-              href="/browseLibraries"
+              href="/user/browseLibraries"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               Browse Libraries
             </a>
             <a
-              href="contact"
+              href="user/contact"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               Contact
             </a>
-            <a
+            {/* <a
               href="/addLibrary"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               AddLibrary
-            </a>
+            </a> */}
           </nav>
           {/* nav - end */}
           {/* buttons - start */}
           <div className="ml-5 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start ">
             <a
-              href="/login"
+              href="/user/login"
               className="inline-block rounded-lg px-4 py-3 text-center text-xl font-semibold text-white outline-none ring-indigo-300"
             >
               Sign in
             </a>
             <a
-              href="/signup"
+              href="/user/signup"
               className="inline-block rounded-xl bg-indigo-600 px-6 py-3 text-center text-xl font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-800 focus-visible:ring active:bg-indigo-700 "
             >
               Sign up

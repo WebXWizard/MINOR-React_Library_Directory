@@ -68,149 +68,207 @@ const UpdateUser = () => {
 
   return (
     <div>
-      <>
-        {/* Hero */}
-        <div className="relative overflow-hidden mt-3">
-          <div className="mx-auto max-w-screen-md py-12 px-4 sm:px-6 md:max-w-screen-xl md:py-20 lg:py-32 md:px-8">
-            <div className="md:pe-8 md:w-1/2 xl:pe-0 xl:w-5/12">
-              {/* Title */}
-              <h1 className="text-3xl text-gray-800 font-bold md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
-                Solving problems for every{" "}
-                <span className="text-blue-600">team</span>
-              </h1>
-              <p className="mt-3 text-base text-gray-500">
-                Built on standard web technology, teams use PreLine to build
-                beautiful cross-platform hybrid apps in a fraction of the time.
-              </p>
-              {/* End Title */}
-              <div className="mt-8 grid">
-                <button
-                  type="button"
-                  className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                >
-                  <svg
-                    className="w-4 h-auto"
-                    width={46}
-                    height={47}
-                    viewBox="0 0 46 47"
-                    fill="none"
-                  >
-                    <path
-                      d="M46 24.0287C46 22.09 45.8533 20.68 45.5013 19.2112H23.4694V27.9356H36.4069C36.1429 30.1094 34.7347 33.37 31.5957 35.5731L31.5663 35.8669L38.5191 41.2719L38.9885 41.3306C43.4477 37.2181 46 31.1669 46 24.0287Z"
-                      fill="#4285F4"
+      <div className="font-[sans-serif] flex items-center md:h-fit py-4 rounded-lg bg-gray-50 ">
+        <div className="w-full max-w-5xl mx-auto ">
+          <div className="grid md:grid-cols-2 gap-20  shadow w-full sm:p-8 p-6 border border-gray-200 rounded-xl relative  ">
+          <div className="grid grid-cols-1">
+              <div className="">
+                <div className="">
+                  <div className=" mt-10 lg:mt-8">
+                    <img
+                      className="hidden md:block w-full rounded-xl "
+                      src="https://cdni.iconscout.com/illustration/premium/thumb/sign-up-illustration-download-in-svg-png-gif-file-formats--log-register-form-user-interface-pack-design-development-illustrations-6430773.png"
+                      alt="Hero Image"
                     />
-                    <path
-                      d="M23.4694 47C29.8061 47 35.1161 44.9144 39.0179 41.3012L31.625 35.5437C29.6301 36.9244 26.9898 37.8937 23.4987 37.8937C17.2793 37.8937 12.0281 33.7812 10.1505 28.1412L9.88649 28.1706L2.61097 33.7812L2.52296 34.0456C6.36608 41.7125 14.287 47 23.4694 47Z"
-                      fill="#34A853"
-                    />
-                    <path
-                      d="M10.1212 28.1413C9.62245 26.6725 9.32908 25.1156 9.32908 23.5C9.32908 21.8844 9.62245 20.3275 10.0918 18.8588V18.5356L2.75765 12.8369L2.52296 12.9544C0.909439 16.1269 0 19.7106 0 23.5C0 27.2894 0.909439 30.8731 2.49362 34.0456L10.1212 28.1413Z"
-                      fill="#FBBC05"
-                    />
-                    <path
-                      d="M23.4694 9.07688C27.8699 9.07688 30.8622 10.9863 32.5344 12.5725L39.1645 6.11C35.0867 2.32063 29.8061 0 23.4694 0C14.287 0 6.36607 5.2875 2.49362 12.9544L10.0918 18.8588C11.9987 13.1894 17.25 9.07688 23.4694 9.07688Z"
-                      fill="#EB4335"
-                    />
-                  </svg>
-                  Sign up with Google
-                </button>
+                  </div>
+                  <div className="hidden absolute top-0 end-0 translate-x-20 md:block lg:translate-x-20">
+                    <svg
+                      className="w-16 h-auto text-orange-500"
+                      width={121}
+                      height={135}
+                      viewBox="0 0 121 135"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164"
+                        stroke="currentColor"
+                        strokeWidth={10}
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5"
+                        stroke="currentColor"
+                        strokeWidth={10}
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874"
+                        stroke="currentColor"
+                        strokeWidth={10}
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <div className="py-6 flex items-center text-sm text-gray-400 uppercase before:flex-1 before:border-t before:me-6 after:flex-1 after:border-t after:ms-6">
-                Or
-              </div>
-              {/* Form */}
-              {userData !== null ? (
-                <Formik initialValues={userData} onSubmit={signUpForm}>
-                  {(updateForm) => {
-                    return (
-                      <form onSubmit={signUpForm.handleSubmit}>
-                        <div className="mb-4">
-                          <label
-                            htmlFor="hs-hero-name-2"
-                            className="block text-sm font-medium"
-                          >
-                            <span className="sr-only">Full name</span>
-                          </label>
-                          {signUpForm.errors.name && signUpForm.touched.name ? (
-                            <div className="text-red-500 text-sm">
-                              {signUpForm.errors.name}
-                            </div>
-                          ) : null}
-                          <input
-                            type="text"
-                            className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                            placeholder="Full name"
-                            id="name"
-                            onChange={updateForm.handleChange}
-                            value={updateForm.values.name}
-                          />
-                        </div>
-                        <div className="mb-4">
-                          <label
-                            htmlFor="hs-hero-email-2"
-                            className="block text-sm font-medium"
-                          >
-                            <span className="sr-only">Email address</span>
-                          </label>
-                          {signUpForm.errors.email &&
-                          signUpForm.touched.email ? (
-                            <div className="text-red-500 text-sm">
-                              {signUpForm.errors.email}
-                            </div>
-                          ) : null}
-                          <input
-                            type="email"
-                            className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                            placeholder="Email address"
-                            id="email"
-                            onChange={updateForm.handleChange}
-                            value={updateForm.values.email}
-                          />
-                        </div>
-                        <div className="mb-4">
-                          <label
-                            htmlFor="hs-hero-password-2"
-                            className="block text-sm font-medium"
-                          >
-                            <span className="sr-only">Password</span>
-                          </label>
-                          {signUpForm.errors.password &&
-                          signUpForm.touched.password ? (
-                            <div className="text-red-500 text-sm">
-                              {signUpForm.errors.password}
-                            </div>
-                          ) : null}
-                          <input
-                            type="password"
-                            className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                            placeholder="Password"
-                            id="password"
-                            onChange={updateForm.handleChange}
-                            value={updateForm.values.password}
-                          />
-                        </div>
-                        <div className="grid">
-                          <button
-                            type="submit"
-                            className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                          >
-                            Sign up
-                          </button>
-                        </div>
-                      </form>
-                    );
-                  }}
-                </Formik>
-              ) : (
-                <p>Loading......</p>
-              )}
             </div>
+            <div className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-2xl shadow-md dark:bg-gray-800 font-[sans-serif]">
+              <div className="px-8 py-8">
+                <div className="flex justify-center mx-auto">
+                  <h3 className="mt-0 text-2xl font-bold text-center text-gray-600 dark:text-gray-200">
+                    Create Your Account
+                  </h3>
+                </div>
+
+                <div className="mt-6 justify-between">
+                  <div className="mt-3 md:flex md:items-center md:-mx-2">
+                    <button className="flex justify-center w-full px-6 py-3 text-white bg-blue-500 rounded-lg md:w-auto md:mx-2 focus:outline-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="mx-2 text-md">Client</span>
+                    </button>
+                    <button className="flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      <a
+                        className="mx-2 text-md hidden lg:inline "
+                        href="/login"
+                      >
+                        Worker
+                      </a>
+                    </button>
+                  </div>
+                </div>
+                {/* Form */}
+                {userData !== null ? (
+                  <Formik initialValues={userData} onSubmit={signUpForm}>
+                    {(updateForm) => {
+                      return (
+                        <form onSubmit={signUpForm.handleSubmit}>
+                          <div className="w-full mt-5">
+                            <label className="block mb-2 text-xl "></label>
+                            {signUpForm.errors.name &&
+                            signUpForm.touched.name ? (
+                              <div className="text-red-500 text-sm">
+                                {signUpForm.errors.name}
+                              </div>
+                            ) : null}
+                            <input
+                              className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                              type="text"
+                              placeholder="Enter Your Name"
+                              aria-label="Email Address"
+                              id="name"
+                              onChange={signUpForm.handleChange}
+                              value={signUpForm.values.name}
+                            />
+                          </div>
+                          <div className="w-full mt-4">
+                            <label className="block mb-2 text-xl "></label>
+                            {signUpForm.errors.email &&
+                            signUpForm.touched.email ? (
+                              <div className="text-red-500 text-sm">
+                                {signUpForm.errors.email}
+                              </div>
+                            ) : null}
+                            <input
+                              className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                              type="email"
+                              placeholder="Email Address"
+                              aria-label="Email Address"
+                              id="email"
+                              onChange={signUpForm.handleChange}
+                              value={signUpForm.values.email}
+                            />
+                          </div>
+                          <div className="w-full mt-4">
+                            <label className="block mb-2 text-xl "></label>
+
+                            {signUpForm.errors.password &&
+                            signUpForm.touched.password ? (
+                              <div className="text-red-500 text-sm">
+                                {signUpForm.errors.password}
+                              </div>
+                            ) : null}
+                            <input
+                              className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                              type="password"
+                              placeholder="Enter Password"
+                              aria-label="Password"
+                              id="password"
+                              onChange={signUpForm.handleChange}
+                              value={signUpForm.values.password}
+                            />
+                          </div>
+                          <div className="w-full mt-4">
+                            <label className="block mb-2 text-xl "></label>
+
+                            {signUpForm.errors.phone &&
+                            signUpForm.touched.phone ? (
+                              <div className="text-red-500 text-sm">
+                                {signUpForm.errors.phone}
+                              </div>
+                            ) : null}
+                            <input
+                              className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                              type="number"
+                              placeholder="Enter Your Number"
+                              aria-label="Password"
+                              id="phone"
+                              onChange={signUpForm.handleChange}
+                              value={signUpForm.values.phone}
+                            />
+                          </div>
+
+                          <div className="flex items-center justify-center mt-4">
+                            <button
+                              // type="button"
+                              className="flex items-center justify-center w-full px-4 py-3 mx-2 text-lg font-medium text-white transition-colors duration-300 transform bg-blue-600 rounded-xl hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
+                            >
+                              {/* <svg class="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"></path>
+                  </svg> */}
+                              Sign up
+                            </button>
+                          </div>
+                        </form>
+                      );
+                    }}
+                  </Formik>
+                ) : (
+                  <p>Loading......</p>
+                )}
+              </div>
+            </div>
+            <div className="divider absolute left-0 right-0 mx-auto w-1 h-full border-2 border-gray-400 max-md:hidden" />
           </div>
-          <div className="hidden md:block md:absolute md:top-0 md:start-1/2 md:end-0 h-full bg-[url('https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover" />
-          {/* End Col */}
         </div>
-        {/* End Hero */}
-      </>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 import localFont from "next/font/local";
 import { Toaster, ToastBar } from "react-hot-toast";
-import Navbar from "./navbar";
+// import Navbar from "../navbar";
 import Sidebar from "./sidebar";
 // import { AppProvider } from "@/context/appContext";
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <AppProvider> */}
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Sidebar />
 

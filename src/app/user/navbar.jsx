@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ const Navbar = () => {
           </Link>
           {/* logo - end */}
           {/* nav - start */}
-          <nav className="hidden gap-12 lg:flex ">
+          <nav className="hidden gap-16 lg:flex ">
             <Link
               href="/"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400 "
@@ -35,51 +36,46 @@ const Navbar = () => {
               Admin
             </Link>
             <Link
-              href="/about"
+              href="/user/about"
               className="inline-flex items-center gap-1 text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               About
             </Link>
             <Link
-              href="/browseLibraries"
+              href="/user/browseLibraries"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               Browse Libraries
             </Link>
             <Link
-              href="contact"
+              href="/user/contact"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               Contact
             </Link>
-            <Link
+            {/* <Link
               href="/addLibrary"
               className="text-md font-semibold text-white hover:border-b-2  border-blue-400"
             >
               AddLibrary
-            </Link>
+            </Link> */}
           </nav>
-          {/* nav - end */}
-          {/* buttons - start */}
+
           <div className="ml-5 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start ">
             <a
-              href="/login"
+              href="/user/login"
               className="inline-block rounded-lg px-4 py-3 text-center text-xl font-semibold text-white outline-none ring-indigo-300"
             >
               Sign in
             </a>
             <a
-              href="/signup"
+              href="/user/signup"
               className="inline-block rounded-xl bg-indigo-600 px-6 py-3 text-center text-xl font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-800 focus-visible:ring active:bg-indigo-700 "
             >
               Sign up
             </a>
           </div>
-          <button
-            // type="button"
-
-            className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
-          >
+          <button className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -94,10 +90,8 @@ const Navbar = () => {
             </svg>
             Menu
           </button>
-          {/* buttons - end */}
         </header>
       </div>
-      {/* Navbar Ends */}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+// import useAppContext from '@/context/appContext'
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -17,6 +18,8 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = () => {
+  // const {setLoggedIn, setCurrentUser} = useAppContext();
+
   const router = useRouter();
   const loginForm = useFormik({
     initialValues: {
@@ -51,9 +54,9 @@ const Login = () => {
             {/* Grid */}
             <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
               <div>
-                {/* <p className="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent">
-                  Preline: A vision for 2024
-                </p> */}
+                <a className="inline-block text-2xl font-semibold bg-clip-text cursor-pointer bg-gradient-to-l from-blue-600 to-violet-500 text-transparent mb-2" href="/">
+                  React Library Directory: A vision for 2024
+                </a>
                 {/* Title */}
                 <div className="mt-4 md:mb-12 max-w-2xl">
                   <h1 className="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl">
@@ -141,7 +144,7 @@ const Login = () => {
                             d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        <span className="mx-2">Worker</span>
+                        <a className="mx-2 text-lg" href="/user/login">Worker</a>
                       </button>
                       <button className="flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
                         <svg
@@ -158,7 +161,7 @@ const Login = () => {
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           />
                         </svg>
-                        <a className="mx-2" href="/signup">
+                        <a className="mx-2 text-lg" href="/user/signup">
                           Client
                         </a>
                       </button>
@@ -166,14 +169,14 @@ const Login = () => {
                   </div>
                   <form onSubmit={loginForm.handleSubmit}>
                     <div className="w-full mt-4">
-                      <label className="block mb-2 text-xl "></label>
+                      <label className="block mb-2 text-2xl "></label>
                       {loginForm.errors.email && loginForm.touched.email ? (
                         <div className="text-red-500 text-sm">
                           {loginForm.errors.email}
                         </div>
                       ) : null}
                       <input
-                        className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                        className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl text-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                         type="email"
                         placeholder="Email Address"
                         aria-label="Email Address"
@@ -192,7 +195,7 @@ const Login = () => {
                         </div>
                       ) : null}
                       <input
-                        className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
+                        className="block w-full px-4 py-2 mt-2 text-white placeholder-gray-500 bg-white border rounded-xl text-lg dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300"
                         type="password"
                         placeholder="Password"
                         aria-label="Password"
@@ -203,14 +206,14 @@ const Login = () => {
                     </div>
 
                     <div className="flex items-center justify-center mt-4">
-                      <button className="px-6 w-full py-2 text-md font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-sky-400 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                      <button className="px-6 w-full py-2 text-lg font-bold tracking-wide text-white capitalize transition-colors duration-300 transform bg-sky-400 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                         Sign In
                       </button>
                     </div>
                     <div className="flex items-center mt-6 -mx-2">
                       <button
                         // type="button"
-                        className="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-300 transform bg-gray-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
+                        className="flex items-center justify-center w-full px-6 py-2 mx-2 text-md font-semibold text-white transition-colors duration-300 transform bg-gray-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
                       >
                         <svg
                           className="w-4 h-4 mx-2 fill-current"
