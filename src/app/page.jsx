@@ -148,7 +148,7 @@ const Home = () => {
           <div className="mt-8 gap-3 flex justify-center">
             <a
               className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:from-violet-600 focus:to-blue-600 py-3 px-4"
-              href="/browseLibraries"
+              href="/user/browseLibraries"
             >
               Get Started
               <svg
@@ -168,7 +168,7 @@ const Home = () => {
             </a>
             <button
               type="button"
-              href=""
+              href="/user/browseLibraries"
               className="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
             >
               Browse Libraries
