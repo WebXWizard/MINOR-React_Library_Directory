@@ -1,9 +1,21 @@
+// "use client";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <div className="ml-auto mb-6 lg:w-[75%] font-[sans-serif] ">
+       <div className="max-w-2xl mx-auto text-center font-[sans-serif]">
+        <h2 className="text-3xl font-bold leading-tight text-indigo-600 sm:text-4xl lg:text-5xl">
+          Welcome to Admin Panel
+        </h2>
+        <p className="max-w-2xl mx-auto mt-4 text-lg leading-relaxed text-gray-600">
+          This Dashboard allows you to manage users, courses, payments,
+          attendance, and website content. It provides a dashboard for key
+          stats, handles student inquiries, and ensures security through
+          role-based access. 🚀
+        </p>
+      </div>
+      <div className="ml-8 font-[sans-serif] mt-4">
         <div className="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
           <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
             <h5

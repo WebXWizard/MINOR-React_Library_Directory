@@ -39,7 +39,7 @@ const ManageUser = () => {
 
   return (
     <div className="bg-gray-200 rounded-xl font-[sans-serif] ">
-      <div className="lg:max-w-[80%] mx-auto py-10 ">
+      <div className="lg:max-w-[95%] mx-auto ">
         <div className="border rounded-xl shadow-lg p-8 bg-cyan-200  ">
           <h1 className="text-center font-bold text-4xl font-[sans-serif]">
             Manage User
