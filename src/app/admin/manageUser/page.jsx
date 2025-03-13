@@ -57,7 +57,7 @@ const ManageUser = () => {
               </tr>
             </thead>
 
-            <tbody className="bg-fuchsia-200 font-[sans-serif]">
+            <tbody className="bg-fuchsia-200 font-[sans-serif] text-sm">
               {userList.map((user) => {
                 return (
                   <tr key={user._id}>
