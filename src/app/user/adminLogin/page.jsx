@@ -5,9 +5,8 @@ import * as Yup from "yup";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-// import useAppContext from '@/context/appContext'
 
-const LoginSchema = Yup.object().shape({
+const AdminLoginSchema = Yup.object().shape({
   email: Yup.string()
     .email("Please enter a valid email address")
     .required("Email is required"),
@@ -18,8 +17,6 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = () => {
-  // const {setLoggedIn, setCurrentUser} = useAppContext();
-
   const router = useRouter();
   const loginForm = useFormik({
     initialValues: {
@@ -29,36 +26,36 @@ const Login = () => {
     onSubmit: (values, { resetForm }) => {
       console.log(values);
       axios
-        .post("http://localhost:5000/user/authenticate", values)
+        .post("http://localhost:5000/admin/authenticate", values)
         .then((response) => {
           console.log(response.status);
           // localStorage.setItem('user', JSON.stringify(response.data) )
           // setLoggedIn(true)
           resetForm();
           toast.success("Login Successfully");
-          router.push("/");
+          router.push("/admin/dashboard");
         })
         .catch((err) => {
           console.log(err);
           toast.error("Invalid Credentials");
         });
     },
-    validationSchema: LoginSchema,
+    validationSchema: AdminLoginSchema,
   });
   return (
     <div>
       <>
         {/* Hero */}
-        <div className="relative  rounded-lg font-[sans-serif]">
+        <div className="relative rounded-lg font-[sans-serif]">
           <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             {/* Grid */}
             <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
               <div>
                 <a
-                  className="inline-block text-2xl font-semibold bg-clip-text cursor-pointer bg-gradient-to-l from-blue-600 to-violet-500 text-transparent mb-2"
+                  className="inline-block text-3xl font-semibold bg-clip-text cursor-pointer bg-gradient-to-l from-blue-600 to-violet-500 text-transparent mb-2"
                   href="/"
                 >
-                  React Library Directory: A vision for 2024
+                  React Library Directory: A vision for 2025
                 </a>
                 {/* Title */}
                 <div className="mt-4 md:mb-12 max-w-2xl">
@@ -94,41 +91,23 @@ const Login = () => {
                       partner.
                     </p>
                   </div>
-                  <footer className="mt-3">
-                    <div className="flex items-center gap-x-4">
-                      <div className="shrink-0">
-                        <img
-                          className="size-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                          alt="Avatar"
-                        />
-                      </div>
-                      <div className="grow">
-                        <div className="font-semibold text-gray-800">
-                          Josh Grazioso
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          Director Payments &amp; Risk | Airbnb
-                        </div>
-                      </div>
-                    </div>
-                  </footer>
+                 
                 </blockquote>
                 {/* End Blockquote */}
               </div>
               {/* End Col */}
 
-              <div className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-2xl shadow-md dark:bg-gray-800">
-                <div className="px-8 py-12">
+              <div className="w-full max-w-sm mx-auto overflow-hidden  rounded-2xl shadow-md bg-gray-800">
+                <div className="px-8 py-4">
                   <div className="flex justify-center mx-auto">
                     <img
-                      className="w-auto h-7 sm:h-8"
-                      src="https://merakiui.com/images/logo.svg"
+                      className="w-auto h-16"
+                      src="../images/Doc1.png"
                       alt=""
                     />
                   </div>
-                  <h3 className="mt-3 text-3xl font-medium text-center text-gray-600 dark:text-gray-200">
-                    Welcome Back
+                  <h3 className=" text-3xl font-medium text-center text-gray-600 dark:text-gray-200">
+                    Admin Login
                   </h3>
                   <div className="mt-6 justify-between">
                     <div className="mt-3 md:flex md:items-center md:-mx-2">
@@ -147,8 +126,8 @@ const Login = () => {
                             d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        <a className="mx-2 text-lg" href="/user/login">
-                          User
+                        <a className="mx-2 text-lg" href="/user/adminLogin">
+                          Admin
                         </a>
                       </button>
                       <button className="flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
@@ -166,9 +145,8 @@ const Login = () => {
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           />
                         </svg>
-
-                        <a className="mx-2 text-lg" href="/user/adminLogin">
-                          Admin
+                        <a className="mx-2 text-lg" href="/user/login">
+                          User
                         </a>
                       </button>
                     </div>
@@ -210,17 +188,25 @@ const Login = () => {
                         value={loginForm.values.password}
                       />
                     </div>
-
+                    <p className="mt-2 text-md text-gray-600 text-end">
+                      {/* I agree all your<span> </span> */}
+                      <a
+                        href="/user/forget-password"
+                        className=" text-indigo-500 border-dotted font-semibold"
+                      >
+                        Forget Password
+                      </a>
+                    </p>
                     <div className="flex items-center justify-center mt-4">
-                      <button className="px-6 w-full py-2 text-lg font-bold tracking-wide text-white capitalize transition-colors duration-300 transform bg-sky-400 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                      <button
+                        //  type="button"
+                        className="px-6 w-full py-2 text-lg font-bold tracking-wide text-white capitalize transition-colors duration-300 transform bg-sky-400 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                      >
                         Sign In
                       </button>
                     </div>
                     <div className="flex items-center mt-6 -mx-2">
-                      <button
-                        // type="button"
-                        className="flex items-center justify-center w-full px-6 py-2 mx-2 text-md font-semibold text-white transition-colors duration-300 transform bg-gray-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
-                      >
+                      <button className="flex items-center justify-center w-full px-6 py-2 mx-2 text-md font-semibold text-white transition-colors duration-300 transform bg-gray-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none">
                         <svg
                           className="w-4 h-4 mx-2 fill-current"
                           viewBox="0 0 24 24"
@@ -255,6 +241,69 @@ const Login = () => {
         </div>
         {/* End Hero */}
       </>
+
+      {/* Footer Section */}
+      <footer className="flex  flex-col space-y-10 justify-center m-10 font-[sans-serif]">
+        <nav className="flex justify-center flex-wrap gap-6 text-gray-500 font-semibold text-lg">
+          <a className="hover:text-gray-900" href="/">
+            Home
+          </a>
+          <a className="hover:text-gray-900" href="/user/about">
+            About
+          </a>
+          <a className="hover:text-gray-900" href="/user/courses">
+            Courses
+          </a>
+          <a className="hover:text-gray-900" href="/user/register">
+            Register
+          </a>
+          <a className="hover:text-gray-900" href="/user/gallery">
+            Gallery
+          </a>
+          <a className="hover:text-gray-900" href="/user/contact">
+            Contact
+          </a>
+        </nav>
+        <div className="flex justify-center gap-8 hover:cursor-pointer mt-8">
+          <a href="https://www.facebook.com/aadityaacomputerl1">
+            {" "}
+            <img
+              src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"
+              width={30}
+              height={30}
+              alt="fb"
+            />
+          </a>
+          <a href="https://whatsapp.com/channel/0029Vb9111MDOQIeLgyR6n3x">
+            <img
+              src="https://www.svgrepo.com/show/452133/whatsapp.svg"
+              width={30}
+              height={30}
+              alt="tw"
+            />
+          </a>
+          <a href="https://www.instagram.com/aadityaacomputerl1/?hl=en">
+            <img
+              src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg"
+              width={30}
+              height={30}
+              alt="inst"
+            />
+          </a>
+          <a href="https://www.youtube.com/@AADITYAACOMPUTER9">
+            <img
+              src="https://www.svgrepo.com/show/452138/youtube.svg"
+              className=""
+              width={30}
+              height={30}
+              alt="gt"
+            />
+          </a>
+        </div>
+        <p className="text-center text-gray-700 text-lg font-semibold">
+          © 2025 Aadityaa Computer's & Digital Hub. All rights reservered.
+        </p>
+      </footer>
     </div>
   );
 };

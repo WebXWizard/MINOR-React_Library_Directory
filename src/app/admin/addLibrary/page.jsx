@@ -34,12 +34,12 @@ const AddLibrary = () => {
   });
   return (
     <div>
-      <div className="rounded-xl lg:ml-60 via-transparent">
-        <div className="mt-1 max-w-5xl lg:max-w-6xl mx-auto rounded-lg ">
-          <div className="grid md:grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2 sm:p-8 p-4 font-[sans-serif] ">
+      <div className="rounded-xl via-transparent">
+        <div className=" mx-auto rounded-lg ">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 lg:grid-cols-1  font-[sans-serif] ">
             {/* Form Start */}
             <div className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-2xl shadow-md dark:bg-gray-800 ">
-              <div className="px-8 py-10 ">
+              <div className="px-8 py-8 ">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-x-5 ">
                   <h3 className=" text-2xl font-bold  flex justify-center text-center ml-8 text-gray-600 dark:text-gray-200 font-sans-serif">
                     Add Library

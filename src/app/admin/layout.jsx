@@ -16,34 +16,24 @@ const geistMono = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="flex h-screen">
-          {/* Sidebar (Fixed Width) */}
-          <Sidebar />
-
-          {/* Main Content (Pushes Right) */}
-          <div className="flex-1 lg:ml-60 p-6">
-            {children}
-          </div>
-        </div>
-
-        <Toaster>
-          {(t) => (
-            <ToastBar
-              toast={t}
-              style={{
-                ...t.style,
-                animation: t.visible
-                  ? "custom-enter 1s ease"
-                  : "custom-exit 1s ease",
-              }}
-            />
-          )}
-        </Toaster>
-      </body>
-    </html>
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="flex-1 lg:ml-60 p-6">
+        {children}
+      </div>
+      <Toaster>
+        {(t) => (
+          <ToastBar
+            toast={t}
+            style={{
+              ...t.style,
+              animation: t.visible
+                ? "custom-enter 1s ease"
+                : "custom-exit 1s ease",
+            }}
+          />
+        )}
+      </Toaster>
+    </div>
   );
 }

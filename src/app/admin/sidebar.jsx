@@ -61,24 +61,12 @@ const Sidebar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="" href="/">
+                  <a className="" href="/admin/manageUser">
                     <button
                       className="middle  font-[sans-serif] none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
                     >
-                      {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="w-5 h-5 text-inherit"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg> */}
+                      
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -94,11 +82,11 @@ const Sidebar = () => {
                         <circle cx="12" cy="7" r="4"></circle>
                       </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        Go to User
+                        manage Users
                       </p>
                     </button>
                   </a>
-                  <a className="" href="/admin/manageUser">
+                  <a className="" href="/admin/manageAdmin">
                     <button
                       className="middle  font-[sans-serif] none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
@@ -117,7 +105,7 @@ const Sidebar = () => {
                         />
                       </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        manage User
+                        manage Admins
                       </p>
                     </button>
                   </a>
@@ -166,7 +154,7 @@ const Sidebar = () => {
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                       </svg>
                       <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        add Product
+                        add Libraries
                       </p>
                     </button>
                   </a>
@@ -192,7 +180,7 @@ const Sidebar = () => {
                       <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
                         Manage Libraries
                       </p>
-                    </button>
+                    </button> 
                   </a>
                 </li>
               </ul>
@@ -204,9 +192,30 @@ const Sidebar = () => {
                   </p>
                 </li>
                 <li>
-                  <a className="" href="/user/login">
+                  <a className="" href="/user/adminSignup">
                     <button
                       className="middle none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
+                      type="button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        className="w-5 h-5 text-inherit"
+                      >
+                        <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
+                      </svg>
+                      <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
+                        Add Admins
+                      </p>
+                    </button>
+                  </a>
+                </li>
+                <li>
+                  <a className="" href="/">
+                    <button
+                      className="middle  font-[sans-serif] font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
                     >
                       <svg
@@ -222,29 +231,8 @@ const Sidebar = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        sign in
-                      </p>
-                    </button>
-                  </a>
-                </li>
-                <li>
-                  <a className="" href="/user/signup">
-                    <button
-                      className="middle  font-[sans-serif] font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
-                      type="button"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="w-5 h-5 text-inherit"
-                      >
-                        <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
-                      </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        sign up
+                        Logout
                       </p>
                     </button>
                   </a>
@@ -254,7 +242,7 @@ const Sidebar = () => {
           </aside>
         </div>
 
-        {/* component */}
+        {/* For Large Screens */}
         <div className="min-h-screen ">
           <aside className="bg-gradient-to-br from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0">
             <div className="relative border-b border-white/20  font-[sans-serif]">
@@ -315,24 +303,11 @@ const Sidebar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="" href="/">
+                  <a className="" href="/admin/manageUser">
                     <button
                       className="middle  font-[sans-serif] none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
                     >
-                      {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="w-5 h-5 text-inherit"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg> */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -348,11 +323,11 @@ const Sidebar = () => {
                         <circle cx="12" cy="7" r="4"></circle>
                       </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        Go to User
+                        Manage Users
                       </p>
                     </button>
                   </a>
-                  <a className="" href="/admin/manageUser">
+                  <a className="" href="/admin/manageAdmin">
                     <button
                       className="middle  font-[sans-serif] none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
@@ -371,7 +346,7 @@ const Sidebar = () => {
                         />
                       </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        manage User
+                        manage Admins
                       </p>
                     </button>
                   </a>
@@ -420,7 +395,7 @@ const Sidebar = () => {
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                       </svg>
                       <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        add Product
+                        add Libraries
                       </p>
                     </button>
                   </a>
@@ -450,17 +425,32 @@ const Sidebar = () => {
                   </a>
                 </li>
               </ul>
-
               <ul className="mb-4 flex flex-col gap-1">
-                <li className="mx-3.5 mt-4 mb-2">
-                  <p className="block antialiased font-[sans-serif] text-sm leading-normal text-white font-black uppercase opacity-75">
-                    auth pages
-                  </p>
-                </li>
                 <li>
-                  <a className="" href="/user/login">
+                  <a className="" href="/user/adminSignup">
                     <button
                       className="middle none font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
+                      type="button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        className="w-5 h-5 text-inherit"
+                      >
+                        <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
+                      </svg>
+                      <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
+                        Add Admins
+                      </p>
+                    </button>
+                  </a>
+                </li>
+                <li>
+                  <a className="" href="/">
+                    <button
+                      className="middle  font-[sans-serif] font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
                       type="button"
                     >
                       <svg
@@ -476,29 +466,8 @@ const Sidebar = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <p className="block antialiased  font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        sign in
-                      </p>
-                    </button>
-                  </a>
-                </li>
-                <li>
-                  <a className="" href="/user/signup">
-                    <button
-                      className="middle  font-[sans-serif] font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
-                      type="button"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="w-5 h-5 text-inherit"
-                      >
-                        <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
-                      </svg>
                       <p className="block antialiased font-[sans-serif] text-base leading-relaxed text-inherit font-medium capitalize">
-                        sign up
+                        Logout
                       </p>
                     </button>
                   </a>

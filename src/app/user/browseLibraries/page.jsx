@@ -38,8 +38,10 @@ const Browse = () => {
 
   const displayProduct = () => {
     return product.map((obj) => (
-      <div className="container font-sans-serif bg-gray-500 rounded-2xl  shadow-2xl">
-        {/* <Link href={"/view/" + obj._id} className=""> */}
+      <div
+        key={obj._id} // Add unique key here
+        className="container font-sans-serif bg-gray-500 rounded-2xl shadow-2xl"
+      >
         <div className="">
           <div className="container mx-auto px-1 py-1">
             <div className="flex sm:justify-center rounded-xl shadow-2xl">
@@ -73,47 +75,6 @@ const Browse = () => {
       </div>
     ));
   };
-
-  // const displayProduct1 = () => {
-  //   return product.map((obj) => (
-  //     <div className=" ">
-     
-  //       <div className="font-[sans-serif]">
-  //         <div className="container ">
-  //           <div className="">
-  //             <div className="bg-white rounded-2xl shadow-xl p-4">
-  //               <div className="relative overflow-hidden">
-  //                 <img
-  //                   className="object-cover w-full h-full rounded-2xl"
-  //                   src={obj.url}
-  //                   alt="Product"
-  //                 />
-  //                 <div className="absolute inset-0 bg-black opacity-40" />
-  //                 <div className="absolute inset-0 flex items-center justify-center">
-  //                   <button className="bg-white text-gray-900 py-2 px-4 rounded-xl font-bold hover:bg-gray-300 hidden md:block">
-  //                     View Product
-  //                   </button>
-  //                 </div>
-  //               </div>
-  //               <h3 className="sm:text-md md:text-lg lg:text-xl font-bold text-gray-900 mt-4">
-  //                 {obj.name}
-  //               </h3>
-
-  //               <div className="flex items-center justify-between mt-4">
-  //                 <span className="text-gray-900 font-bold sm:text-md md:text-lg lg:text-xl ">
-  //                   ₹ {obj.price}
-  //                 </span>
-  //                 <button className="bg-gray-900 text-white py-2 px-4 rounded-xl font-bold hover:bg-gray-800">
-  //                   Add to Cart
-  //                 </button>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   ));
-  // };
 
   // For Searching(Filter)
   const applysearch = (e) => {
