@@ -54,37 +54,38 @@ const Navbar = () => {
         >
           {/* nav - start */}
           <nav className="flex flex-col gap-4 lg:flex-row lg:gap-16 mt-4 lg:mt-0">
-             <Link
-                href="/"
-                className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
-              >
-                Home
-              </Link>
+            <Link
+              href="/"
+              className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
+            >
+              Home
+            </Link>
 
-              <Link
-                href="/user/about"
-                className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/user/browseLibraries"
-                className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
-              >
-                Browse Libraries
-              </Link>
-              <Link
-                href="user/contactUs"
-                className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
-              >
-                Contact Us
-              </Link>
-               <Link
-                href="/user/adminLogin"
-                className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
-              >
-                Admin
-              </Link>
+            <Link
+              href="/user/about"
+              className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/user/browseLibraries"
+              className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
+            >
+              Browse Libraries
+            </Link>
+
+            <Link
+              href="/user/adminLogin"
+              className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
+            >
+              Admin
+            </Link>
+            <Link
+              href="/user/contactUs"
+              className="text-xl font-semibold text-white hover:border-b-2 border-blue-400"
+            >
+              Contact Us
+            </Link>
           </nav>
 
           {/* buttons - start */}
